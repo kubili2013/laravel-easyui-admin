@@ -1,19 +1,35 @@
-# 初源科技-随机游戏Key项目
+# Laravel  EasyUI 构建的后台管理
 
-## 项目背景
+可以快速构建一个后台管理，中文项目，本实例依赖`zizaco/Entrust`laravel扩展包。
 
-随机游戏key项目,根据外国火爆的游戏随机抽取玩法移植到国内。主要针对Steam游戏,付少量的金钱可以随机抽取游戏,有可能抽取达到3a大作。
+## 实现功能
+1. 管理员管理
+2. 角色管理
+3. 权限管理
+4. 菜单管理
+5. 操作管理
 
-## 本项目说明
+## 安装
+1. 利用 composer 安装依赖
+` composer install`
+2. 利用.env文件配置数据库
+- 复制`.env.example`，重命名`.env`，根据自己情况编辑如下所示的项
+```
+DB_CONNECTION=mysql
+DB_HOST=IP地址
+DB_PORT=端口
+DB_DATABASE=数据库名
+DB_USERNAME=用户名
+DB_PASSWORD=密码
 
-本项目用来提供后台管理员
-
-## 功能
-
-1. 管理员登录注册
-2. 管理员角色权限管理
-3. 菜单管理
-4. 用户管理 (增删改查,修改密码等)
-5. 订单管理 (根据条件查询,修改状态等操作)
-6. 咨询管理 (咨询信息的增删改查)
-7. 文件上传
+## Entrust 角色权限包 需要缓存的驱动是 memcached 或者是 array
+CACHE_DRIVER=array
+## 管理员新建用户系统自动分配的默认密码
+DEFAULT_PSW=123456
+```
+3. 生成表
+`php artisan migrate`
+4. 生成基础数据
+```
+php artisan db:seed
+```
