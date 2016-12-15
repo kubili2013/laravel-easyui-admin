@@ -1,0 +1,14 @@
+*{font-family:Tahoma,Verdana,微软雅黑,新宋体}
+body{background:#D2E0F2; }
+a{ color:Black; text-decoration:none;}
+a:hover{ color:Red; text-decoration:underline;}
+
+.menu{margin:0px;padding:0px;}
+.menu ul{/**list-style-type:none;**/margin:0px; padding:10px;}
+.menu ul li{ padding:0px;}
+.menu ul li a{line-height:24px;}
+.menu ul li div{margin:2px 0px;padding-left:10px;padding-top:2px;}
+.menu ul li div.hover{ background:#E0ECFF;cursor:pointer;}
+.menu ul li div.hover a{color:#416AA3;}
+.menu ul li div.selected{ background:#E0ECFF;cursor:default;}
+.menu ul li div.selected a{color:#416AA3; font-weight:bold;}
