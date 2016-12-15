@@ -11,9 +11,10 @@
 
 ## 安装
 1. 利用 composer 安装依赖
-` composer install`
-2. 利用.env文件配置数据库
-- 复制`.env.example`，重命名`.env`，根据自己情况编辑如下所示的项
+```
+composer install
+```
+2. 利用.env文件配置数据库,复制`.env.example`，重命名`.env`,根据自己情况编辑如下所示的项
 ```
 DB_CONNECTION=mysql
 DB_HOST=IP地址
@@ -28,7 +29,9 @@ CACHE_DRIVER=array
 DEFAULT_PSW=123456
 ```
 3. 生成表
-`php artisan migrate`
+```
+php artisan migrate
+```
 4. 生成基础数据
 ```
 php artisan db:seed
