@@ -109,7 +109,6 @@
             success:function (result){
                 var data = eval('('+result+')');
                 if(data.success){
-                    $('#dlg').dialog('close');
                     $.messager.show({    // show error message
                         title: '成功消息',
                         msg: data.msg
@@ -119,7 +118,7 @@
                     queryMenu();
                     $('#menu-dlg').dialog('close');
                     // 菜单之后,刷新菜单树menu-cc
-                    $('#menu-cc').combotree('reload');
+                    reloadAllTree();
                 }else{
                     $('#menu-messagebox').html(data.msg);
                 }
@@ -161,6 +160,7 @@
                                     title: '成功消息',
                                     msg: data.msg
                                 });
+                                reloadAllTree();
                             } else {
                                 $.messager.show({
                                     title: '失败消息',

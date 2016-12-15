@@ -70,7 +70,7 @@ class RoleController extends Controller
         $data = $request->all();
         // 校验数据
         $validator = Validator::make($data,[
-            'name' => 'required|string|max:12',
+            'name' => 'required|string|max:16',
             'display_name' => 'required|string|max:48',
             'description' => 'required|string|max:64',
             'permissions' => 'required|array',
@@ -96,7 +96,7 @@ class RoleController extends Controller
         $data = $request->all();
         // 校验数据
         $validator = Validator::make($data,[
-            'name' => 'required|string|max:12',
+            'name' => 'required|string|max:16',
             'display_name' => 'required|string|max:48',
             'description' => 'required|string|max:64',
             'permissions' => 'required|array',

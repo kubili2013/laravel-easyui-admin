@@ -187,6 +187,7 @@
                     //新增成功 刷新grid
                     queryRoles();
                     $('#role-edit-dlg').dialog('close');
+                    reloadAllTree();
                 }else{
                     $('#role-e-messagebox').html(data.msg);
                 }
@@ -220,6 +221,7 @@
                     //新增成功 刷新grid
                     queryRoles();
                     $('#role-dlg').dialog('close');
+                    reloadAllTree()
                 }else{
                     $('#role-messagebox').html(data.msg);
                 }
@@ -260,6 +262,7 @@
                                     title: '成功消息',
                                     msg: data.msg
                                 });
+                                reloadAllTree();
                             } else {
                                 $.messager.show({
                                     title: '失败消息',

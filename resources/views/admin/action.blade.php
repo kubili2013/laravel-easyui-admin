@@ -39,7 +39,7 @@
             <input name="description" label="操作简介:" labelAlign="right" class="easyui-textbox" style="width:95%" data-options="required:true,validType:'length[1,64]'">
         </div>
         <div style="margin-bottom:10px">
-            <input name="parent_id" label="父操作:" labelAlign="right" style="width:95%" class="easyui-combotree"
+            <input id="action-cc-parent_id" name="parent_id" label="父操作:" labelAlign="right" style="width:95%" class="easyui-combotree"
                    data-options="url:'/GetAllActionsByRootTree',method:'get',required:true,value:'0'">
         </div>
         <div style="margin-bottom:10px">
@@ -209,6 +209,7 @@
                     //新增成功 刷新grid
                     queryActions();
                     $('#action-edit-dlg').dialog('close');
+                    reloadAllTree();
                 }else{
                     $('#action-e-messagebox').html(data.msg);
                 }
@@ -239,9 +240,11 @@
                         title: '成功消息',
                         msg: data.msg
                     });
-                    //新增成功 刷新grid
+                    // 新增成功 刷新grid
                     queryActions();
                     $('#action-dlg').dialog('close');
+                    // 新增之后,刷新操作树action-cc,action-edit-cc
+                    reloadAllTree();
                 }else{
                     $('#action-messagebox').html(data.msg);
                 }
@@ -282,6 +285,7 @@
                                     title: '成功消息',
                                     msg: data.msg
                                 });
+                                reloadAllTree();
                             } else {
                                 $.messager.show({
                                     title: '失败消息',

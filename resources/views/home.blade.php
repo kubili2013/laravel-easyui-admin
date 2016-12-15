@@ -70,5 +70,18 @@
                 });
             }
         });
+        function reloadAllTree(){
+            $('#user-roles-cg').combogrid("reload");
+            $('#user-roles-add-cg').combogrid("reload");
+            $('#role-edit-cc').combotree("reload");
+            $('#role-cc').combotree("reload");
+            $('#permission-edit-cc').combotree("reload");
+            $('#permission-cc').combotree("reload");
+            $('#menu-cc').combotree("reload");
+            $('#action-edit-cc').combotree("reload");
+            $('#action-edit-cc-parent_id').combotree("reload");
+            $('#action-cc').combotree("reload");
+            $('#action-cc-parent_id').combotree("reload");
+        }
     </script>
 @endsection

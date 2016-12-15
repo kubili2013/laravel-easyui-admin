@@ -95,11 +95,9 @@ class MenuController extends Controller
             'name' => $data['name'],
             'icon' => $data['icon'],
             'description' =>  $data['description'],
-            'parent_id' =>  $data['parent_id'],
+            'parent_id' =>  isset($data['parent_id'])?$data['parent_id']:0,
+            'action_id' => $data['action'],
         ]);
-        if(isset($data['action']) && count($data['action']) > 0) {
-            $menu->action()->save(Action::find($data['action']));
-        }
         return ['success' => true,'msg' => '新增成功!'];
     }
 

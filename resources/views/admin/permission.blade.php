@@ -143,8 +143,7 @@
                     //新增成功 刷新grid
                     queryPermission();
                     //新增成功 重新获取权限树
-                    $('#permission-cc').combotree("reload");
-                    $('#permission-edit-cc').combotree("reload");
+                    reloadAllTree();
                 }else{
                     $('#permission-edit-messagebox').html(data.msg);
                 }
@@ -191,8 +190,7 @@
                     //新增成功 刷新grid
                     queryPermission();
                     //新增成功 重新获取权限树
-                    $('#permission-cc').combotree("reload");
-                    $('#permission-edit-cc').combotree("reload");
+                    reloadAllTree();
                 }else{
                     $('#permission-messagebox').html(data.msg);
                 }
@@ -233,6 +231,7 @@
                                     title: '成功消息',
                                     msg: data.msg
                                 });
+                                reloadAllTree();
                             } else {
                                 $.messager.show({
                                     title: '失败消息',

@@ -33,7 +33,7 @@
             <input name="email" label="电子邮箱:" labelAlign="right" class="easyui-textbox" required="true" style="width:95%" data-options="required:true,validType:['email','length[0,32]']" >
         </div>
         <div style="margin-bottom:10px">
-            <select name="roles[]" class="easyui-combogrid" style="width:95%" data-options="
+            <select id="user-roles-add-cg" name="roles[]" class="easyui-combogrid" style="width:95%" data-options="
                         panelWidth: 250,
                         multiple: true,
                         idField: 'id',
@@ -201,6 +201,7 @@
                     });
                     //新增成功 刷新grid
                     queryUser();
+                    reloadAllTree();
                 }else{
                     $('#user-edit-messagebox').html(data.msg);
                 }
@@ -246,6 +247,7 @@
 
                     //新增成功 刷新grid
                     queryUser();
+                    reloadAllTree();
                 }else{
                     $('#user-messagebox').html(data.msg);
                 }
@@ -286,6 +288,7 @@
                                     title: '成功消息',
                                     msg: data.msg
                                 });
+                                reloadAllTree();
                             } else {
                                 $.messager.show({
                                     title: '失败消息',
