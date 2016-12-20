@@ -13,12 +13,13 @@ function initMenu(_menus) {
             n.children = new Array();
         }
         $.each(n.children, function(j, o) {
-            menubox += '<li><div><a id="handler-' + o.id + '" href="/handler/' + o.id + '" ><span class="icon '+o.icon+'" ></span>' + o.name + '</a></div></li> ';
+            menubox += '<li><div><div class="icon-s '+o.icon+'" >&nbsp;</div>&nbsp;&nbsp;<a id="handler-' + o.id + '" href="/handler/' + o.id + '" ><span>' + o.name + '</span></a></div></li> ';
         });
         menubox += '</ul></div>';
         $(".menu").accordion('add',{
             title:n.name,
-            content:menubox
+            content:menubox,
+            iconCls:n.icon
         });
 
     });

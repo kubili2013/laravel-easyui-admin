@@ -1,7 +1,7 @@
 <div  data-options="region:'north'" title="设置查询条件" class="easyui-panel" style="height:80px;">
     <div style="margin: 10px 20px;">
         <input name="qname" id="permission-qname" class="easyui-textbox" label="权限名称:" labelAlign="right" style="width:300px;">
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-search" onclick="queryPermission();" style="margin-left:10px;">查询</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-2012092109942" onclick="queryPermission();" style="margin-left:10px;">查询</a>
     </div>
 </div>
 <div data-options="region:'center'" style="width:100%;">

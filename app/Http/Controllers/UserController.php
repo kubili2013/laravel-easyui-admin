@@ -6,6 +6,7 @@ use App\Role;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Hash;
 use Validator;
 use Illuminate\Http\Request;
 
@@ -51,17 +52,23 @@ class UserController extends Controller
      * @param $id
      * @return array
      */
-    public function resetPsw(Request $request,$id)
+    public function resetPsw(Request $request)
     {
         $user = Auth::user();
         $data = $request->all();
         $validator = Validator::make($data,[
-            'old_password' => 'required|min:6',
-            'password' => 'required|min:6',
+            'old_password' => 'required|min:6|max:32',
+            'password' => 'required|min:6|max:32',
+            're_password' => 'same:password'
         ]);
-        $user -> password = bcrypt($data['password']);
-        $user -> save();
-        return ['success' => true,'msg' => '重置成功!'];
+        if(Hash::check($data['old_password'], $user -> password)){
+            $user -> password = bcrypt($data['password']);
+            $user -> save();
+            return ['success' => true,'msg' => '重置成功!'];
+        }else{
+            return ['success' => false,'msg' => '密码错误!'];
+        }
+
     }
 
     /**

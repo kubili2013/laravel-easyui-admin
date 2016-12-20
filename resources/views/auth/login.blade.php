@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <form id="login-form" role="form" method="POST" action="{{ url('/login') }}">
+    <form id="login-form" role="form" method="POST" action="{{ url('/login') }}" style="margin-left:40%;margin-top:10%;">
         <div class="easyui-panel" title="登录" style="margin:0 auto;width:100%;max-width:360px;padding:30px 60px;">
             {{ csrf_field() }}
             <div style="margin-bottom:10px">
@@ -13,8 +13,8 @@
             </div>
             <div style="margin-bottom:10px">
                 <label for="password" class="label-top">密码:</label>
-                <input class="easyui-textbox " id="password" type="password" name="password"
-                       data-options="iconCls:'icon-lock',prompt:'输入密码'
+                <input class="easyui-passwordbox" id="password"  type="password" name="password"
+                       data-options="iconCls:'icon-lock'
                         ,required:true,validType:['string','length[6,32]']
                         " style="width:100%">
             </div>

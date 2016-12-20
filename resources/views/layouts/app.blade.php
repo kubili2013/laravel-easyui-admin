@@ -11,14 +11,16 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/themes/bootstrap/easyui.css">
     <link rel="stylesheet" type="text/css" href="/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/themes/IconExtension.css">
     <link rel="stylesheet" type="text/css" href="/css/home.css">
     <!-- 加载 easyui -->
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="/js/home.js"></script>
+    <script type="text/javascript" src="/js/curd.js"></script>
     {{-- 七牛云存储上传所用js --}}
     <script type="text/javascript" src="/js/plupload.full.min.js"></script>
     <script type="text/javascript" src="/js/zh_CN.js"></script>

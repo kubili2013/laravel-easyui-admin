@@ -64,7 +64,7 @@ Route::group(['middleware' => ['auth']],function(){
 
     Route::any('User/{id}/Roles',"UserController@getRoles")->where('id', '[0-9]+');
 
-
+    Route::any('/reset/psw',"UserController@resetPsw");
 });
 // 需要admin角色才能进入的方法
 Route::group(['middleware' => ['action']],function(){
