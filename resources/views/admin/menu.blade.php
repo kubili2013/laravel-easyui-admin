@@ -17,7 +17,7 @@
     @endpermission
 </div>
 
-<div id="menu-dlg" class="easyui-dialog" style="width:480px;"
+<div id="menu-dlg" class="easyui-dialog" style="width:480px;" modal="true"
      closed="true" buttons="#menu-dlg-buttons">
     <form id="menu-addForm" method="post" class="easyui-form" action="{{url('/menu/create')}}" style="margin:0;padding:20px 50px">
         <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">菜单信息</div>

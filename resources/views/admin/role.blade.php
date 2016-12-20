@@ -20,7 +20,7 @@
     @endpermission
 </div>
 
-<div id="role-dlg" class="easyui-dialog" style="width:480px;"
+<div id="role-dlg" class="easyui-dialog" style="width:480px;" modal="true"
      closed="true" buttons="#role-dlg-buttons">
     <form id="role-addForm" method="post" class="easyui-form" action="{{url('/role/create')}}" style="margin:0;padding:20px 50px">
         <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">菜单信息</div>
@@ -46,7 +46,7 @@
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#role-dlg').dialog('close')" style="width:90px">取消</a>
 </div>
 
-<div id="role-edit-dlg" class="easyui-dialog" style="width:480px;"
+<div id="role-edit-dlg" class="easyui-dialog" style="width:480px;" modal="true"
      closed="true" buttons="#role-edit-dlg-buttons">
     <form id="role-editForm" method="post" class="easyui-form" style="margin:0;padding:20px 50px">
         <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">菜单信息</div>

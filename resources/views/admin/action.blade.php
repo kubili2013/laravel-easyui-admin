@@ -20,7 +20,7 @@
     @endpermission
 </div>
 
-<div id="action-dlg" class="easyui-dialog" style="width:480px;"
+<div id="action-dlg" class="easyui-dialog" style="width:480px;" modal="true"
      closed="true" buttons="#action-dlg-buttons">
     <form id="action-addForm" method="post" class="easyui-form" action="{{url('/action/create')}}" style="margin:0;padding:20px 50px">
         <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">操作信息</div>
@@ -53,7 +53,7 @@
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#action-dlg').dialog('close')" style="width:90px">取消</a>
 </div>
 
-<div id="action-edit-dlg" class="easyui-dialog" style="width:480px;"
+<div id="action-edit-dlg" class="easyui-dialog" style="width:480px;" modal="true"
      closed="true" buttons="#action-edit-dlg-buttons">
     <form id="action-editForm" method="post" class="easyui-form" style="margin:0;padding:20px 50px">
         <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">操作信息</div>
